@@ -1,3 +1,42 @@
-.header {
-  background-color: #121212;
+@import "../../styles/mixins.scss";
+
+.background {
+  background-color: var(--black-color);
+}
+
+.container {
+  @include section-container;
+}
+
+.offset {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0 22px 0;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 100%;
+  color: var(--white-color);
+  transition: all 0.3s ease;
+
+  @include link-condition;
+}
+
+.nav {
+  a {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    color: var(--white-color);
+    transition: all 0.3s ease;
+
+    &:not(:last-child) {
+      margin: 0 20px 0 0;
+    }
+
+    @include link-condition;
+  }
 }
