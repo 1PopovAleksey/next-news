@@ -1,0 +1,46 @@
+@import "../../../styles/mixins.scss";
+
+.background {
+  background-color: var(--black-color);
+}
+
+.container {
+  @include section-container;
+}
+
+.offset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 90px 0;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 60px 0 0 0;
+  width: 100%;
+  list-style-type: none;
+
+  li {
+    width: 100%;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 120%;
+    color: var(--white-color);
+
+    &:not(:last-child) {
+      margin: 0 0 20px 0;
+    }
+
+    a {
+      margin: 0 0 0 0.2em;
+      width: max-content;
+      color: var(--gray-2-color);
+    }
+  }
+}
