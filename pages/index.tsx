@@ -1,14 +1,17 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-import styles from "../styles/Home.module.scss";
+import Hero from "../components/Home/Hero";
+import News from "../components/Home/News";
+import AboutUs from "../components/Home/AboutUs";
+import Contacts from "../components/Home/Contacts";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Next News</title>
         <meta name="description" content="This site made for NEWS" />
@@ -17,12 +20,15 @@ const Home: NextPage = () => {
 
       <Header />
 
-      <main className={styles.main}>
-        <h1>Main Page</h1>
+      <main>
+        <Hero />
+        <News />
+        <AboutUs />
+        <Contacts />
       </main>
 
       <Footer />
-    </div>
+    </>
   );
 };
 
