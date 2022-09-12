@@ -1,0 +1,33 @@
+@import "../../../styles/mixins.scss";
+
+.background {
+  background-color: var(--black-color);
+}
+
+.container {
+  @include section-container;
+}
+
+.offset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 90px 0;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 0;
+  width: 100%;
+}
+
+.link {
+  width: 300px;
+  height: 60px;
+  font-size: 24px;
+
+  @include link-more;
+}
