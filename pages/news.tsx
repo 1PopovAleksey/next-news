@@ -1,15 +1,27 @@
 import type { NextPage } from "next";
-import Link from "next/link";
+import Head from "next/head";
 
-import styles from "./Header.module.scss";
+import Header from "../components/Header";
+import NewsPage from "../components/News";
+import Footer from "../components/Footer";
 
 const News: NextPage = () => {
   return (
-    <main>
-      <section>
-        <h1>News</h1>
-      </section>
-    </main>
+    <>
+      <Head>
+        <title>News</title>
+        <meta name="description" content="This site made for NEWS" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Header />
+
+      <main>
+        <NewsPage />
+      </main>
+
+      <Footer />
+    </>
   );
 };
 
