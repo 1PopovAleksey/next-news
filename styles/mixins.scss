@@ -16,3 +16,49 @@
 
   @content;
 }
+
+@mixin link-condition {
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 1;
+    color: var(--yellow-color);
+  }
+}
+
+@mixin link-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--gray-color);
+  border-radius: 25px;
+  font-weight: 400;
+  line-height: 100%;
+  color: var(--black-color);
+  background: var(--gray-color);
+  transition: all 0.3s ease;
+
+  &:hover {
+    border: 2px solid var(--white-color);
+    color: var(--white-color);
+    background: var(--black-color);
+  }
+
+  &:focus-visible {
+    border: 2px solid var(--white-color);
+    color: var(--white-color);
+    background: var(--black-color);
+  }
+
+  &:active {
+    border: 2px solid var(--yellow-color);
+    color: var(--yellow-color);
+    background: var(--black-color);
+  }
+}
