@@ -1,0 +1,45 @@
+@import "../../../styles/mixins.scss";
+
+.background {
+  background: url(../../../public/assests/hero.png) no-repeat;
+  background-size: cover;
+}
+
+.container {
+  @include section-container;
+}
+
+.offset {
+  padding: 76px 0;
+}
+
+.content {
+  padding: 40px;
+  width: 853px;
+  border-radius: 25px;
+  background: var(--black-color);
+
+  h1 {
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;
+    color: var(--yellow-color);
+  }
+
+  p {
+    margin: 0 0 30px 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: var(--white-color);
+  }
+}
+
+.link {
+  width: 280px;
+  height: 60px;
+  font-size: 24px;
+
+  @include link-more;
+}
