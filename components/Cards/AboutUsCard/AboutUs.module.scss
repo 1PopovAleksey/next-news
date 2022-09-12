@@ -1,0 +1,58 @@
+@import "../../../styles/mixins.scss";
+
+.card {
+  position: relative;
+  display: flex;
+  width: 580px;
+  height: 550px;
+  border-radius: 25px;
+  background-color: var(--black-color);
+  box-shadow: 0px 0px 20px rgba(221, 221, 221, 0.25);
+}
+
+.content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  height: 100%;
+
+  h3 {
+    margin: 0 0 10px 0;
+    width: 240px;
+    height: 30%;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 120%;
+    color: var(--white-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  p {
+    height: 255%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--white-color);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 17;
+    -webkit-box-orient: vertical;
+  }
+
+  .more {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+  }
+
+  .link {
+    width: 240px;
+    height: 50px;
+    font-size: 20px;
+
+    @include link-more;
+  }
+}
